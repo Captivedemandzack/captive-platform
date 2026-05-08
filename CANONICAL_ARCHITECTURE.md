@@ -24,7 +24,7 @@ This architecture gives us:
 - Safe client editing for text and images.
 - Predictable agent behavior.
 - Reusable templates and specs.
-- A clear path from BioDesign to the next 50 sites.
+- A clear path from the first client implementation to the next 50 sites.
 
 ## What Next.js Owns
 
@@ -114,6 +114,6 @@ This is where strategy, references, page specs, reusable prompts, and launch wor
 This folder currently contains the canonical rules and project-memory structure. It is ready to receive either:
 
 - A fresh Next.js client-site scaffold.
-- A migrated BioDesign implementation.
+- A migrated client implementation.
 - A reusable starter template for future clients.
 

@@ -253,7 +253,7 @@ ${Object.entries(tokenDraft)
 
 - Use this for color logic only. Do not copy these brands' layouts unless they also appear in the section-reference catalog.
 - Prefer palette behavior over exact hex values.
-- Validate final colors against the real BioDesign logo.
+- Validate final colors against the real client logo.
 - Check contrast before committing tokens to production.
 `;
 }

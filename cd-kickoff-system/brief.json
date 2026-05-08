@@ -1,42 +1,45 @@
 {
-  "project": "biodesign-clinic",
-  "client": "BioDesign Clinic",
-  "destination_url": "biodesignclinic.com",
-  "industry": "men's and women's longevity medicine, hormone therapy, peptide therapy",
-  "positioning": "premium clinical authority, evidence-based protocols, physician-led care",
-  "anti_positioning": "not a gym brand, not a supplement store, not a medspa, not a spa",
-  "locations": ["Tampa", "Orlando", "Melbourne", "Lake Mary"],
+  "project": "client-project-slug",
+  "client": "Client Name",
+  "destination_url": "example.com",
+  "industry": "client industry",
+  "positioning": "desired market position",
+  "anti_positioning": "what the brand should avoid",
+  "locations": [],
   "sections": {
-    "men": ["Testosterone Replacement Therapy", "Peptide Therapy", "Weight Loss", "Hormone Optimization", "Performance Medicine"],
-    "women": ["Hormone Replacement", "Weight Loss", "Peptide Therapy", "Sexual Wellness", "Menopause Management"]
+    "primary": []
   },
-  "primary_cta": "Free Consultation",
-  "lead_flow": "Form → Podium → SMS to patient → scheduler → EMR",
-  "compliance": "LegitScript suspended. No shirtless imagery. No efficacy claims. No bodybuilding aesthetic. Peptide pages require FDA disclaimer.",
+  "primary_cta": "Primary CTA",
+  "lead_flow": "Form -> destination",
+  "compliance": "List compliance constraints here.",
+  "brand_colors": [],
   "brand_signals": {
-    "existing_logo": "Circle monogram + clean wordmark — already luxury-clinical",
-    "current_site_problem": "Dark hex pattern teal aesthetic — gym brand energy, fights the logo",
-    "direction": "Premium longevity medicine. Clinical but warm. Editorial authority."
+    "existing_logo": "",
+    "current_site_problem": "",
+    "direction": ""
   },
-  "brand_colors": ["#0C0F0E", "#C9A96E", "#F0EDE6", "#FAF8F4", "#9B7FA6"],
-  "color_direction": "deep dark base (near-black, warmer than pure black), warm champagne gold accent, off-white breathing room. Women's section: warm cream base, dusty mauve accent.",
-  "typography_direction": "High-contrast serif for display headlines (editorial authority) + geometric sans for body (clinical precision). Not gym fonts, not hospital fonts.",
-  "reference_brands": ["Marek Health", "Hone Health", "The Well NYC"],
+  "color_direction": "",
+  "typography_direction": "",
+  "reference_brands": [],
   "pages_to_build": [
     {
       "name": "Homepage",
-      "sections": ["hero-split", "trust-bar", "services-grid", "why-biodesign", "how-it-works", "locations-grid", "testimonials", "final-cta"]
-    },
-    {
-      "name": "Location — Tampa",
-      "sections": ["location-hero", "services-offered", "meet-the-team", "location-info", "testimonials-local", "cta"]
+      "sections": [
+        "hero",
+        "trust-bar",
+        "services",
+        "value-props",
+        "process",
+        "testimonials",
+        "cta"
+      ]
     }
   ],
   "image_style": {
-    "lighting": "warm clinical, slightly desaturated, soft shadows",
-    "subjects": "confident professionals 35-55, clothed lifestyle and consultation settings",
-    "banned": "shirtless, gym equipment, supplements, blue LED lab lighting, bodybuilding",
-    "color_grade": "warm highlights, deep dark shadows, slight desaturation",
-    "perspective": "eye level, shallow depth of field"
+    "lighting": "",
+    "subjects": "",
+    "banned": "",
+    "color_grade": "",
+    "perspective": ""
   }
 }

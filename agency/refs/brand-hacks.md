@@ -19,4 +19,3 @@ Use this file to study adjacent brands that have already solved similar visual p
 ### Image Direction
 
 ### CTA System
-

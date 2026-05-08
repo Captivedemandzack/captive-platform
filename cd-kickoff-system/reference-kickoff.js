@@ -83,8 +83,8 @@ const SECTION_LIBRARY = {
       "Fixed card grid with short descriptions. Cards explain scope, not every clinical detail.",
     editableFields: ["services.men[0].title", "services.men[0].body", "services.women[0].title", "services.women[0].body"],
   },
-  "why-biodesign": {
-    label: "Why BioDesign",
+  "why-client": {
+    label: "Why This Client",
     references: [
       {
         url: "https://marekhealth.com",
@@ -128,7 +128,7 @@ const SECTION_LIBRARY = {
       },
     ],
     pattern:
-      "Location cards for Tampa, Orlando, Melbourne, and Lake Mary. Make local access visible early.",
+      "Location cards for the client markets. Make local access visible early.",
     editableFields: ["locations[0].city", "locations[0].address", "locations[0].phone", "locations[0].hours"],
   },
   testimonials: {
@@ -379,7 +379,7 @@ ${brandRefs}
 
 ## Synthesized Direction
 
-BioDesign should feel like premium longevity medicine: clinically serious, warm, refined, and consultation-first.
+The client brand should feel aligned with the positioning in the brief: specific, credible, refined, and conversion-aware.
 
 The design should combine:
 
@@ -387,7 +387,7 @@ The design should combine:
 - Warm health photography.
 - Luxury wellness restraint.
 - Strong trust density.
-- Clear men's and women's audience paths.
+- Clear audience paths.
 
 ## Token Starting Point
 
@@ -399,9 +399,9 @@ ${Object.entries(tokens)
 
 ## Human Review Notes
 
-- Validate the palette against the real BioDesign logo.
+- Validate the palette against the real client logo.
 - Confirm type choices feel premium clinical, not cosmetic wellness.
-- Keep women's palette distinct but still part of one unified BioDesign system.
+- Keep any audience-specific palette variations part of one unified brand system.
 - Do not use visual language that suggests gym, supplements, bodybuilding, or unregulated products.
 `;
 }
@@ -490,8 +490,7 @@ Before each prompt, make Cursor read:
 - \`CANONICAL_ARCHITECTURE.md\`
 - \`.cursor/rules/project-architecture.mdc\`
 - \`.cursor/rules/captive-studio-spec.mdc\`
-- \`.cursor/rules/biodesign-project.mdc\`
-- \`.cursor/rules/medical-compliance.mdc\`
+- Client-specific Cursor rules, if present
 - \`agency/brief/intake.md\`
 - \`agency/refs/brand-hack-synthesis.md\`
 - \`agency/specs/${pageSlug(page).includes("homepage") ? "homepage" : "location-page"}.md\`
@@ -513,8 +512,8 @@ Rules:
 - Do not hardcode client-editable visible copy in JSX.
 - Use EditableText for editable text fields.
 - Use EditableImage for editable image fields.
-- Use the BioDesign tokens from agency/refs/design-variables.css as the starting point.
-- Preserve medical-compliance rules.
+- Use the generated tokens from agency/refs/design-variables.css as the starting point.
+- Preserve any compliance rules in the client brief and Cursor rules.
 
 Editable field starting points:
 ${section.editableFields.map((field) => `- ${field}`).join("\n") || "- Define fields in the page spec before building."}
