@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+.next/
+out/
+coverage/
+*.log
+agency/refs/live-hunt/*/screenshots/*.png
+agency/refs/palette-hunt/*/screenshots/*.png
+
+agency/refs/live-hunt/
+agency/refs/palette-hunt/

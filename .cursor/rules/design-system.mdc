@@ -1,0 +1,52 @@
+---
+description: Design and component guardrails for scalable custom-coded client sites.
+globs: ["src/app/**", "src/components/**", "src/templates/**", "agency/refs/**", "agency/specs/**"]
+alwaysApply: false
+---
+
+# Design System Rules
+
+Design quality matters. The JSON content layer must not reduce the site to a generic template.
+
+## Creative Control
+
+Keep these decisions in code:
+
+- Section structure.
+- Responsive behavior.
+- Animation and motion.
+- Custom illustration.
+- Canvas or SVG interaction.
+- Visual hierarchy.
+- Conversion strategy.
+- Theme tokens.
+
+Expose only safe content slots through JSON.
+
+## Reusable Blocks
+
+When a pattern appears likely to repeat across clients, design it as a reusable block with a clear prop interface.
+
+Priority reusable blocks:
+
+- Hero.
+- Trust bar.
+- Feature grid.
+- Testimonial.
+- Service card.
+- Location card or map.
+- FAQ.
+- CTA.
+- Contact form.
+- Footer.
+
+## Client Editing Boundary
+
+Clients may edit words and images. They should not directly control the design system.
+
+If a request requires layout changes, treat it as a code change, not a content edit.
+
+## Visual Reference Workflow
+
+Use `agency/refs/` to capture reference sites, section patterns, color and type inspiration, and brand-hack notes before building major pages.
+

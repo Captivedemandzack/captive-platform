@@ -1,0 +1,33 @@
+---
+description: Durable research, prompt, spec, and runbook workflow for repeatable client builds.
+globs: ["agency/**", "*.md"]
+alwaysApply: false
+---
+
+# Research Workflow
+
+The `agency/` folder is the project memory.
+
+## Required Folders
+
+```txt
+agency/brief/
+agency/audit/
+agency/refs/
+agency/specs/
+agency/prompts/
+agency/runbooks/
+```
+
+## Use The Folders This Way
+
+- `brief/`: client inputs, positioning, constraints, image style guide.
+- `audit/`: current-site findings, SEO notes, compliance notes, migration risks.
+- `refs/`: reference site analysis, layout patterns, brand hacks.
+- `specs/`: page-level and feature-level instructions before code.
+- `prompts/`: reusable prompts for manual agent workflows.
+- `runbooks/`: SOPs and checklists.
+
+## Agent Output Rule
+
+When using ChatGPT, Claude, Gemini, Cursor, or Codex for research or planning, save the useful output into one of these folders. Do not leave important decisions trapped in chat history.

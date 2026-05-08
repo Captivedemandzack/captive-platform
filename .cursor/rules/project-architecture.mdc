@@ -1,0 +1,60 @@
+---
+description: Canonical architecture for Captive Studio-compatible client websites.
+globs: ["**/*.{ts,tsx,js,jsx,json,md,mdc}"]
+alwaysApply: true
+---
+
+# Project Architecture
+
+This project uses the Captive client-site architecture.
+
+## Core Rule
+
+Next.js owns design, structure, routing, animation, SEO logic, and behavior. JSON owns only safe client-editable content.
+
+Do not turn JSON into a page builder. Do not let JSON control layout, section order, animation timing, spacing, colors, component composition, or arbitrary HTML.
+
+## Required Boundaries
+
+Use JSON for:
+
+- Text content.
+- Image objects.
+- SEO metadata.
+- CTA labels and URLs when the page spec exposes them.
+- Repeated content inside a fixed template.
+
+Use React/TypeScript/CSS for:
+
+- Layout.
+- Art direction.
+- Animation.
+- Interactive behavior.
+- Design tokens.
+- Section composition.
+- Conversion hierarchy.
+
+## Canonical App Shape
+
+When this project contains a Next.js app, prefer this structure:
+
+```txt
+content/
+src/app/
+src/templates/
+src/lib/content/
+src/lib/editable/
+agency/
+```
+
+Use `agency/` for durable project memory and strategy. Use `src/` for production app code.
+
+## Agent Behavior
+
+Before multi-file changes:
+
+1. Check `AGENTS.md`.
+2. Check relevant files in `agency/specs/`.
+3. Preserve the Captive Studio editor contract.
+4. Keep edits scoped to the requested template, route, or workflow.
+

@@ -1,0 +1,60 @@
+---
+description: Rules for editable content, JSON schemas, seed content, and copy handoff.
+globs: ["content/**", "src/templates/**", "agency/specs/**", "agency/brief/**"]
+alwaysApply: false
+---
+
+# Content Editing Rules
+
+Client-editable content lives in structured JSON. The design stays in code.
+
+## JSON Field Design
+
+Field names should be plain and stable:
+
+```txt
+hero.headline
+hero.subhead
+hero.image
+hero.ctaLabel
+hero.ctaHref
+sections[0].title
+sections[0].body
+```
+
+Prefer content-shaped names over design-shaped names. Use `headline`, not `bigBlueText`.
+
+## Schema Design
+
+Every template needs a Zod schema.
+
+The schema should:
+
+- Validate text length.
+- Validate image object shape.
+- Limit arrays to the number the design supports.
+- Keep optional fields truly optional in the component.
+
+## Copy Rules
+
+Copy should sound like a confident specialist, not a generic marketing page.
+
+Avoid:
+
+- unlock
+- elevate
+- harness the power of
+- in today's fast-paced world
+- comprehensive solutions
+- cutting-edge solutions
+- seamless
+- transform your journey
+
+Prefer:
+
+- Specific patient or customer outcomes.
+- Direct language.
+- Short paragraphs.
+- Clear CTA text.
+- Risk reversal under major CTAs when appropriate.
+

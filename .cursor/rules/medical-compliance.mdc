@@ -1,0 +1,88 @@
+---
+description: Medical, LegitScript, peptide, claim, CTA, and imagery guardrails for BioDesign.
+globs: ["agency/**", "content/**", "src/**", "app/**", "components/**", "public/**"]
+alwaysApply: false
+---
+
+# Medical Compliance Rules
+
+BioDesign has active LegitScript sensitivity. Treat medical claims and imagery conservatively.
+
+This file is an editorial and implementation guardrail, not legal advice.
+
+## Imagery Rules
+
+Do not use:
+
+- Shirtless imagery.
+- Bodybuilding imagery.
+- Gym equipment.
+- Supplement bottle imagery.
+- Athletic performance framing.
+- Blue LED lab cliches.
+- Before/after injection imagery.
+
+Prefer:
+
+- Clothed lifestyle imagery.
+- Warm clinical consultation settings.
+- Clean modern clinic interiors.
+- Professional provider headshots.
+- Confident adults ages 35-55.
+- Eye-level photography.
+- Warm clinical lighting.
+- Slight desaturation.
+- Deep soft shadows.
+
+## Claim Rules
+
+Do not claim:
+
+- Guaranteed results.
+- Cure.
+- Eliminate.
+- Reverse disease.
+- Reverse aging.
+- Anti-aging tied to disease prevention.
+- FDA-approved unless the exact compound or treatment is verified.
+- Clinically proven unless a specific source supports it.
+
+Prefer:
+
+- Consultation-first language.
+- Candidacy language.
+- Physician-led evaluation.
+- Individual results vary.
+- Questions instead of unsupported claims.
+
+## Peptide Rules
+
+Peptide pages need extra review.
+
+BPC-157 and Thymosin Beta-4 require heightened scrutiny and should not be framed as product-purchase pages.
+
+Use consultation-oriented framing:
+
+```txt
+A physician-led consultation determines whether this therapy is appropriate.
+```
+
+## CTA Rules
+
+Use:
+
+- Schedule a Free Consultation.
+- Book Your Consultation.
+- Start With a Free Consult.
+
+Do not use:
+
+- Buy now.
+- Order peptide.
+- Get [drug].
+- Start treatment today without clinical review.
+
+## Human Review
+
+Any page involving peptides, hormone therapy, sexual wellness, weight loss claims, or treatment outcomes should be flagged for human review before launch.
+

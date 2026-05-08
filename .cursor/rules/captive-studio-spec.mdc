@@ -1,0 +1,90 @@
+---
+description: Captive Studio client-site editor contract. Required for templates, editable primitives, preview routes, and content files.
+globs: ["src/templates/**", "src/lib/editable/**", "src/app/preview/**", "content/**", "src/app/**/page.tsx"]
+alwaysApply: false
+---
+
+# Captive Studio Editor Contract
+
+Follow this rule whenever building or editing Captive Studio-compatible client sites.
+
+The source specification is `client-site-spec.md`. If there is a conflict, the source specification wins.
+
+## Production Content
+
+Production pages read from local JSON files in `/content/`.
+
+Content files use this shape:
+
+```json
+{
+  "templateKey": "homepage",
+  "slug": "home",
+  "metadata": {
+    "title": "Page title",
+    "description": "Page description"
+  },
+  "content": {},
+  "publishedAt": "2026-04-28T00:00:00.000Z"
+}
+```
+
+## Preview Content
+
+The preview route `/preview/[pageId]?editor=1` fetches draft content from Captive Studio and renders the matching template in editor mode.
+
+Preview mode must include:
+
+- `EditorModeProvider`.
+- `EditorInstrumentation`.
+- `postMessage` support for ready, hover, select, refresh, highlight, and clearHighlight.
+
+## Editable Fields
+
+Every editable text field must use `EditableText`.
+
+Every editable image field must use `EditableImage`.
+
+Every field path must exactly match the JSON structure:
+
+```txt
+hero.headline
+hero.image
+features[0].title
+features[2].body
+cta.buttonLabel
+```
+
+Editable elements must emit:
+
+```txt
+data-field-path
+data-field-type
+```
+
+only in editor mode.
+
+## Images
+
+Never store editable images as bare strings.
+
+Use:
+
+```json
+{
+  "url": "https://cdn.example.com/image.jpg",
+  "width": 1920,
+  "height": 1080,
+  "alt": "Descriptive alt text"
+}
+```
+
+## Do Not
+
+- Do not hardcode client-editable text in JSX.
+- Do not hardcode editable image URLs in JSX.
+- Do not invent field path formats.
+- Do not read from Supabase on production routes.
+- Do not add client authentication to production routes.
+- Do not allow clients to add, remove, or reorder fixed template sections unless the product spec changes.
+
