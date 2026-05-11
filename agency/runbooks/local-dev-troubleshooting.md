@@ -4,7 +4,7 @@ Use this when the browser looks like raw HTML, CSS is missing, or the terminal s
 
 ## Most Common Cause
 
-The Next.js dev server and a production build both write to `.next`. If `bun run build` runs while `bun run dev` is still active, the dev server can serve stale stylesheet paths like:
+The Next.js dev server and a production build can fight if they both write to `.next`. Client projects should configure development to use `.next` and production verification to use `.next-build`. If a browser still looks broken, a previous dev server may be serving stale output or a tab may have cached an old dev asset path. Example stale stylesheet path:
 
 ```txt
 /_next/static/css/app/layout.css
@@ -37,5 +37,10 @@ Hard refresh the browser if it still looks stale.
 ## Working Rule
 
 - Use `bun run dev` or `bun run dev:fresh` while designing.
-- Use `bun run build` only for verification, ideally after stopping the dev server.
+- Use `bun run build` for verification. In properly configured client repos it should write to `.next-build`, not `.next`, so it should not corrupt the local browser preview.
 - If CSS disappears, do not judge the design until the dev server has been restarted cleanly.
+
+## Output Directories
+
+- Dev server: `.next`
+- Production build verification: `.next-build`
