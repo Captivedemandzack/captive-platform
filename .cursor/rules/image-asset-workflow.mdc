@@ -1,0 +1,26 @@
+---
+description: Rules for harvesting, reviewing, generating, and wiring client images.
+globs: ["src/**", "content/**", "public/**", "agency/**", "cd-kickoff-system/**"]
+alwaysApply: false
+---
+
+# Image Asset Workflow
+
+Before building a visually important section, check whether approved real assets exist.
+
+Use:
+
+- `agency/runbooks/image-asset-workflow.md`
+- `agency/brief/image-style-guide.md`
+- `agency/refs/client-assets.md`, if present
+- `agency/refs/live-reference-latest.md`
+- Latest reference screenshots
+
+Rules:
+
+- Do not use remote placeholder image services in rendered pages.
+- Do not leave broken image URLs.
+- Prefer approved local assets from `public/images/{client}/`.
+- Harvested client assets in `public/client-assets/source/` are raw source material and must be reviewed before production use.
+- If a needed image is missing, create an image brief instead of inventing a random stock-looking placeholder.
+- Keep all editable image selections in content JSON. Do not hardcode client-editable image paths in JSX.

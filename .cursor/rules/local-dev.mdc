@@ -1,0 +1,20 @@
+---
+description: Local Next.js dev server troubleshooting and verification rules.
+globs: ["src/**", "app/**", "package.json", "agency/runbooks/**"]
+alwaysApply: false
+---
+
+# Local Dev
+
+If the browser looks like raw HTML or CSS appears missing:
+
+- Treat it as a dev-server/cache issue first, not a design decision.
+- Read `agency/runbooks/local-dev-troubleshooting.md`.
+- Stop the dev server, then restart with `bun run dev:fresh`.
+- Do not run `bun run build` while `bun run dev` is actively serving a browser preview.
+
+Before judging visual quality:
+
+- Confirm global CSS is loading.
+- Confirm there are no 404s for `/_next/static/css/...`.
+- Confirm images are not broken.

@@ -41,5 +41,8 @@
     "banned": "",
     "color_grade": "",
     "perspective": ""
-  }
+  },
+  "current_site_urls": [
+    "https://example.com"
+  ]
 }

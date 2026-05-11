@@ -1,0 +1,29 @@
+---
+description: Visual quality gate for client section builds.
+globs: ["src/**", "content/**", "agency/specs/**", "agency/refs/**"]
+alwaysApply: false
+---
+
+# Visual Quality Gate
+
+Every visible section must be treated as a real design pass, not a scaffold.
+
+Before building a section:
+
+- Read the relevant section packet in `agency/refs/section-packets/`.
+- Read `agency/refs/live-reference-latest.md` and the latest screenshot index.
+- Identify 2-4 reference screenshots or patterns that inform the section.
+
+Build requirements:
+
+- Do not create generic text-and-card blocks unless the reference packet explicitly calls for that pattern.
+- Do not use typography that conflicts with the approved client brand direction.
+- Do not use remote placeholder image services in rendered pages.
+- Do not leave broken images, empty media boxes, or browser console image errors.
+- Do not hardcode client-editable copy in JSX.
+- Make desktop and mobile layouts feel intentional before moving to the next section.
+- Use reference screenshots for composition and hierarchy, but create a new client-specific design.
+
+Stop condition:
+
+If the result looks like a scaffold, a wireframe, or a default Tailwind layout, revise it before reporting completion.

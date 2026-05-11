@@ -50,3 +50,17 @@ If a request requires layout changes, treat it as a code change, not a content e
 
 Use `agency/refs/` to capture reference sites, section patterns, color and type inspiration, and brand-hack notes before building major pages.
 
+
+## Quality Gates
+
+Before accepting a visible section, apply:
+
+- `agency/runbooks/section-quality-gate.md`
+- `.cursor/rules/visual-quality-gate.mdc`
+
+Before using imagery, apply:
+
+- `agency/runbooks/image-asset-workflow.md`
+- `.cursor/rules/image-asset-workflow.mdc`
+
+A section that looks like a scaffold, ignores references, has broken assets, or hardcodes editable content is not complete.

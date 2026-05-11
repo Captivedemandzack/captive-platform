@@ -324,8 +324,8 @@ function synthesizeTokens(brief) {
     "color-text-secondary-women": "#6B6560",
     "color-accent-women": "#9B7FA6",
     "color-accent-women-hover": "#7D6388",
-    "font-display": "'Cormorant Garamond', Georgia, serif",
-    "font-body": "'DM Sans', system-ui, sans-serif",
+    "font-display": "'DM Sans', 'Inter', system-ui, sans-serif",
+    "font-body": "'DM Sans', 'Inter', system-ui, sans-serif",
     "font-mono": "'DM Mono', monospace",
     "text-display": "clamp(3.5rem, 8vw, 7rem)",
     "text-h1": "clamp(2.5rem, 5vw, 4.5rem)",
@@ -383,7 +383,7 @@ The client brand should feel aligned with the positioning in the brief: specific
 
 The design should combine:
 
-- Dark editorial authority.
+- Dark clinical authority.
 - Warm health photography.
 - Luxury wellness restraint.
 - Strong trust density.

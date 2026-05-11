@@ -6,7 +6,8 @@
   "scripts": {
     "references": "node reference-kickoff.js",
     "hunt": "node live-reference-hunter.js",
-    "palette": "node palette-adjacency-hunter.js"
+    "palette": "node palette-adjacency-hunter.js",
+    "assets": "node live-site-asset-harvester.js"
   },
   "keywords": [],
   "author": "",
